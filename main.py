@@ -8,8 +8,14 @@ import random # For random fun fact
 
 
 # Create a Atbash Fun Fact Function
-
-
+def fun_fact():
+    facts = [
+        "The Atbash cipher, is a simple monoalphabetic substitution cipher originally used to encrypt the Hebrew alphabet.",
+        "It works by substituting each letter from one end with its corresponding letter on the other.",
+        "In English, A becomes Z, B becomes Y, and so on.",
+        "The Atbash cipher is sometimes called the mirror code!"
+    ]
+    print(random.choice(facts))
 # Create a list for encrypt and decrypt
 
 
