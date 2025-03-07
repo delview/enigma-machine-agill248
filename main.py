@@ -2,9 +2,18 @@ import random # For random fun fact
 
 # This is a Enigma Machine
 
-# Create a Encrypt Function
+#Create a Encrypt Function
+def encrypt_func(encrypt: list):
+    while True:
+        encrypt_ans = input("Please type in the words you would like to encrypt!")
+    if "exit"
+
 
 # Create a Decrypt Function
+def decrypt_func(decrypt: list):
+    while True:
+        decrypt_ans = input("Please type in the words you like to decrypt!")
+    
 
 
 # Create a Atbash Fun Fact Function
@@ -43,3 +52,6 @@ while True:
 
 
 # Give them a menu to choose from, either encrypt/decrypt a message(restart), give a random fun fact about Atbash, or exit
+while True:
+    print("\nHere are your new choices if you would like to have some fun! (1) Decrypt or Encrypt a message again, (2) Get a fun fact about Atbash, or (3) Exit the Program!")
+    choice = input("Please select your next option...").strip()
