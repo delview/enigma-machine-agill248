@@ -2,17 +2,22 @@ import random # For random fun fact
 
 # This is a Enigma Machine
 
+
+# Atbash Cipher Function to apply it into game (reversed)
+def atbash_cipher(cipher: str):
+    alphabet_normal = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    alphabet_reversed = "ZYXWVUTSRQPONMLKJIHGFEDCBA"
+
+
 #Create a Encrypt Function
-def encrypt_func(encrypt: list):
-    while True:
-        encrypt_ans = input("Please type in the words you would like to encrypt!")
+def encrypt_func(encrypt_list: list):
+    encrypt_ans = input("Please type in the words you would like to encrypt!")
     
 
 
 # Create a Decrypt Function
-def decrypt_func(decrypt: list):
-    while True:
-        decrypt_ans = input("Please type in the words you like to decrypt!")
+def decrypt_func(decrypt_list: list):
+    decrypt_ans = input("Please type in the words you like to decrypt!")
     
 
 
@@ -34,7 +39,11 @@ def previous_his(encrypt_list: list, decrypt_list: list):
             print(text)
     else: 
         print("There is no previous or current decryptions..")
-
+    if encrypt_list:
+        for message in encrypt_list:
+            print(message) # keep it different so I would know, but ask Mr.Kung if it will mess up game!
+    else:
+        print("There are no past or current encryptions!")
 
 # Create a list for encrypt
 encrypt_list = []
@@ -50,7 +59,6 @@ print(f"Hello {name}, I hope you have a blast!")
 # Ask the user if they would like to encrypt or decrypt a message
 while True:
     user_q = input("Would you like to either encrypt or decrypt a message? Type encrypt or decrypt!")
-
     if user_q == "encrypt":
         encrypt_func(encrypt_list)
     elif user_q == "decrypt":
@@ -59,10 +67,5 @@ while True:
         print("Type the words encrypt or decrypt only.")
         continue
 
-# Present the user with their message encrypted or decrypted
-
 
 # Give them a menu to choose from, either encrypt/decrypt a message(restart), give a random fun fact about Atbash, or exit
-while True:
-    print("\nHere are your new choices if you would like to have some fun! (1) Decrypt or Encrypt a message again, (2) Get a fun fact about Atbash, or (3) Exit the Program!")
-    choice = input("Please select your next option...").strip()
