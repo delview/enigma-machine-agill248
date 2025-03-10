@@ -6,7 +6,7 @@ import random # For random fun fact
 def encrypt_func(encrypt: list):
     while True:
         encrypt_ans = input("Please type in the words you would like to encrypt!")
-    if "exit"
+    
 
 
 # Create a Decrypt Function
@@ -25,11 +25,22 @@ def fun_fact():
         "The Atbash cipher is sometimes called the mirror code!"
     ]
     print(random.choice(facts))
+
+# Create a View History Function
+def previous_his(encrypt_list: list, decrypt_list: list):
+    print("\nHere are your past encryptions and decryptions!")
+    if decrypt_list:
+        for text in decrypt_list:
+            print(text)
+    else: 
+        print("There is no previous or current decryptions..")
+
+
 # Create a list for encrypt
-encrypt = []
+encrypt_list = []
 
 # Create a list for decrypt
-decrypt = []
+decrypt_list = []
 
 # Greet the user
 print("Welcome to the Enigma Machine on Python! Today's cipher language is Atbash!")
@@ -38,15 +49,15 @@ print(f"Hello {name}, I hope you have a blast!")
 
 # Ask the user if they would like to encrypt or decrypt a message
 while True:
-    try:
-        user_q = input("Would you like to encrypt or decrypt a message?")
-    except:
-        if not "yes" or "no":
-            print("Please select either yes or no.")
-    
+    user_q = input("Would you like to either encrypt or decrypt a message? Type encrypt or decrypt!")
 
-# When user selects if they would like to encrypt or decrypt then ask them to type in their message
-
+    if user_q == "encrypt":
+        encrypt_func(encrypt_list)
+    elif user_q == "decrypt":
+        decrypt_func(decrypt_list)
+    else:
+        print("Type the words encrypt or decrypt only.")
+        continue
 
 # Present the user with their message encrypted or decrypted
 
