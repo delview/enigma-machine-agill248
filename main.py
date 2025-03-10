@@ -68,4 +68,14 @@ while True:
         continue
 
 
-# Give them a menu to choose from, either encrypt/decrypt a message(restart), give a random fun fact about Atbash, or exit
+# Give them a menu to choose from, either encrypt/decrypt a message(restart), give a random fun fact about Atbash, or exit 
+    while True:
+        print("\nHeyy, here are your following options! (1) Encrypt or Decrypt another message, (2) View your history, (3) Fun fact about Atbash and (4) Exit!")
+        final = input("Please select from one of the four options above!").strip()
+
+        if final == "1":
+           (print)
+        elif final == "2":
+            previous_his(encrypt_list, decrypt_list)
+        elif final == "3":
+            fun_fact()
