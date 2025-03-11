@@ -3,21 +3,49 @@ import random # For random fun fact
 # This is a Enigma Machine
 
 
-# Atbash Cipher Function to apply it into game (reversed)
-def atbash_cipher(cipher: str):
-    alphabet_normal = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    alphabet_reversed = "ZYXWVUTSRQPONMLKJIHGFEDCBA"
-
-
 #Create a Encrypt Function
 def encrypt_func(encrypt_list: list):
-    encrypt_ans = input("Please type in the words you would like to encrypt!")
-    
+    {
+        "A":"Z",
+        "B":"Y",
+        "C":"X",
+        "D":"W",
+        "E":"V",
+        "F":"U",
+        "G":"T",
+        "H":"S",
+        "I":"R",
+        "J":"Q",
+        "K":"P",
+        "L":"O",
+        "M":"N",
+        "N":"M",
+        "O":"L",
+        "P":"K",
+        "Q":"J",
+        "R":"I",
+        "S":"H",
+        "T":"G",
+        "U":"F",
+        "V":"E",
+        "W":"D",
+        "X":"C",
+        "Y":"B",
+        "Z":"A",
+    }
+    encrypt_ans = input("Please type in the words you would like to encrypt.")
 
 
 # Create a Decrypt Function
 def decrypt_func(decrypt_list: list):
-    decrypt_ans = input("Please type in the words you like to decrypt!")
+    {
+
+
+
+
+
+        
+    }
     
 
 
@@ -50,6 +78,7 @@ encrypt_list = []
 
 # Create a list for decrypt
 decrypt_list = []
+
 
 # Greet the user
 print("Welcome to the Enigma Machine on Python! Today's cipher language is Atbash!")
