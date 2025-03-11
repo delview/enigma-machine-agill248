@@ -5,7 +5,7 @@ import random # For random fun fact
 
 #Create a Encrypt Function
 def encrypt_func(encrypt_list: list):
-    {
+    encrypt_dict = {
         "A":"Z",
         "B":"Y",
         "C":"X",
@@ -38,15 +38,35 @@ def encrypt_func(encrypt_list: list):
 
 # Create a Decrypt Function
 def decrypt_func(decrypt_list: list):
-    {
-
-
-
-
-
-        
+    decrypt_dict = {
+        "Z":"A",
+        "Y":"B",
+        "X":"C",
+        "W":"D",
+        "V":"E",
+        "U":"F",
+        "T":"G",
+        "S":"H",
+        "R":"I",
+        "Q":"J",
+        "P":"K",
+        "O":"L",
+        "N":"M",
+        "M":"N",
+        "L":"O",
+        "K":"P",
+        "J":"Q",
+        "I":"R",
+        "H":"S",
+        "G":"T",
+        "F":"U",
+        "E":"V",
+        "D":"W",
+        "C":"X",
+        "B":"Y",
+        "A":"Z",
     }
-    
+    decrypt_ans = input("Please type in the words about what you would like to decrypt!")
 
 
 # Create a Atbash Fun Fact Function
