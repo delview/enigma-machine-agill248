@@ -2,7 +2,6 @@ import random # For random fun fact
 
 # This is a Enigma Machine
 
-
 #Create a Encrypt Function
 def encrypt_func(encrypt_dict: dict):
     encrypt_dict = {
@@ -108,7 +107,7 @@ print(f"(also {name} make sure you get yourself a meal from mcdonalds)")
 
 # Ask the user if they would like to encrypt or decrypt a message
 while True:
-    user_q = input("Would you like to either encrypt or decrypt a message? Type encrypt or decrypt!")
+    user_q = input("Would you like to either encrypt or decrypt a message? Type encrypt or decrypt!").strip()
     if user_q == "encrypt":
         encrypt_func(encrypt_list)
     elif user_q == "decrypt":
