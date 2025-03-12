@@ -4,7 +4,7 @@ import random # For random fun fact
 
 
 #Create a Encrypt Function
-def encrypt_func(encrypt_list: list):
+def encrypt_func(encrypt_dict: dict):
     encrypt_dict = {
         "A":"Z",
         "B":"Y",
@@ -104,6 +104,7 @@ decrypt_list = []
 print("Welcome to the Enigma Machine on Python! Today's cipher language is Atbash!")
 name = input("What is your name?")
 print(f"Hello {name}, I hope you have a blast!")
+print(f"(also {name} make sure you get yourself a meal from mcdonalds)")
 
 # Ask the user if they would like to encrypt or decrypt a message
 while True:
