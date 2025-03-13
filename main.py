@@ -3,38 +3,19 @@ import random # For random fun fact
 # This is a Enigma Machine
 
 #Create a Encrypt Function
-def encrypt_func(encrypt_dict: dict):
+def encrypt_func(encrypt_list: list):
     encrypt_dict = {
-        "A":"Z",
-        "B":"Y",
-        "C":"X",
-        "D":"W",
-        "E":"V",
-        "F":"U",
-        "G":"T",
-        "H":"S",
-        "I":"R",
-        "J":"Q",
-        "K":"P",
-        "L":"O",
-        "M":"N",
-        "N":"M",
-        "O":"L",
-        "P":"K",
-        "Q":"J",
-        "R":"I",
-        "S":"H",
-        "T":"G",
-        "U":"F",
-        "V":"E",
-        "W":"D",
-        "X":"C",
-        "Y":"B",
-        "Z":"A",
+        "A":"Z", "B":"Y", "C":"X", "D":"W", "E":"V", "F":"U", "G":"T", "H":"S",
+        "I":"R", "J":"Q", "K":"P", "L":"O", "M":"N", "N":"M", "O":"L", "P":"K",
+        "Q":"J", "R":"I", "S":"H", "T":"G", "U":"F", "V":"E", "W":"D", "X":"C", 
+        "Y":"B", "Z":"A",
     }
     encrypt_ans = input("Please type in the words you would like to encrypt.")
-
-
+    encrypt_message = ""
+    for letter in encrypt_ans:
+        encrypt_message += encrypt_dict.get(letter)
+    encrypt_list.append(encrypt_message)
+    print(f"{encrypt_message}")
 # Create a Decrypt Function
 def decrypt_func(decrypt_list: list):
     decrypt_dict = {
