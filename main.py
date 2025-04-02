@@ -13,41 +13,24 @@ def encrypt_func(encrypt_list: list):
     encrypt_ans = input("Please type in the words you would like to encrypt.")
     encrypt_message = ""
     for letter in encrypt_ans:
-        encrypt_message += encrypt_dict.get(letter)
+        encrypt_message += encrypt_dict.get(letter, letter) # Didn't save, but I remember putting psuedo for asking Mr.Kung defination of .get
     encrypt_list.append(encrypt_message)
     print(f"{encrypt_message}")
+
 # Create a Decrypt Function
 def decrypt_func(decrypt_list: list):
     decrypt_dict = {
-        "Z":"A",
-        "Y":"B",
-        "X":"C",
-        "W":"D",
-        "V":"E",
-        "U":"F",
-        "T":"G",
-        "S":"H",
-        "R":"I",
-        "Q":"J",
-        "P":"K",
-        "O":"L",
-        "N":"M",
-        "M":"N",
-        "L":"O",
-        "K":"P",
-        "J":"Q",
-        "I":"R",
-        "H":"S",
-        "G":"T",
-        "F":"U",
-        "E":"V",
-        "D":"W",
-        "C":"X",
-        "B":"Y",
-        "A":"Z",
+        "Z":"A", "Y":"B", "X":"C", "W":"D", "V":"E", "U":"F", "T":"G", "S":"H",
+        "R":"I", "Q":"J", "P":"K", "O":"L", "N":"M", "M":"N", "L":"O", "K":"P",
+        "J":"Q", "I":"R", "H":"S", "G":"T", "F":"U", "E":"V", "D":"W", "C":"X",
+        "B":"Y", "A":"Z",
     }
     decrypt_ans = input("Please type in the words about what you would like to decrypt!")
-
+    decrypt_text = ""
+    for letter in decrypt_ans:
+        decrypt_text += decrypt_dict.get(letter, letter)
+    decrypt_list.append(decrypt_text)
+    print(f"{decrypt_text}")
 
 # Create a Atbash Fun Fact Function
 def fun_fact():
