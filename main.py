@@ -9,6 +9,11 @@ def encrypt_func(encrypt_list: list):
         "I":"R", "J":"Q", "K":"P", "L":"O", "M":"N", "N":"M", "O":"L", "P":"K",
         "Q":"J", "R":"I", "S":"H", "T":"G", "U":"F", "V":"E", "W":"D", "X":"C", 
         "Y":"B", "Z":"A",
+        "a":"z", "b":"y", "c":"x", "d":"w", "e":"v", "f":"u", "g":"t", "h":"s",
+        "i":"r", "j":"q", "k":"p", "l":"o", "m":"n", "n":"m", "O":"L", "P":"K",
+        "Q":"J", "R":"I", "S":"H", "T":"G", "U":"F", "V":"E", "W":"D", "X":"C", 
+        "Y":"B", "Z":"A",
+        
     }
     encrypt_ans = input("Please type in the words you would like to encrypt.")
     encrypt_message = ""
