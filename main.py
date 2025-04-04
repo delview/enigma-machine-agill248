@@ -10,15 +10,15 @@ def encrypt_func(encrypt_list: list):
         "Q":"J", "R":"I", "S":"H", "T":"G", "U":"F", "V":"E", "W":"D", "X":"C", 
         "Y":"B", "Z":"A",
         "a":"z", "b":"y", "c":"x", "d":"w", "e":"v", "f":"u", "g":"t", "h":"s",
-        "i":"r", "j":"q", "k":"p", "l":"o", "m":"n", "n":"m", "O":"L", "P":"K",
-        "Q":"J", "R":"I", "S":"H", "T":"G", "U":"F", "V":"E", "W":"D", "X":"C", 
-        "Y":"B", "Z":"A",
+        "i":"r", "j":"q", "k":"p", "l":"o", "m":"n", "n":"m", "o":"l", "p":"k",
+        "q":"j", "r":"i", "s":"h", "t":"g", "u":"f", "v":"e", "w":"d", "x":"c", 
+        "y":"b", "z":"a",
         
     }
     encrypt_ans = input("Please type in the words you would like to encrypt.")
     encrypt_message = ""
     for letter in encrypt_ans:
-        encrypt_message += encrypt_dict.get(letter, letter) # Didn't save, but I remember putting psuedo for asking Mr.Kung defination of .get
+        encrypt_message += encrypt_dict.get(letter) # .get means to return 
     encrypt_list.append(encrypt_message)
     print(f"{encrypt_message}")
 
@@ -29,11 +29,15 @@ def decrypt_func(decrypt_list: list):
         "R":"I", "Q":"J", "P":"K", "O":"L", "N":"M", "M":"N", "L":"O", "K":"P",
         "J":"Q", "I":"R", "H":"S", "G":"T", "F":"U", "E":"V", "D":"W", "C":"X",
         "B":"Y", "A":"Z",
+        "z":"a", "y":"b", "x":"c", "w":"d", "v":"e", "u":"f", "t":"g", "s":"h",
+        "r":"i", "q":"j", "p":"k", "o":"l", "n":"m", "m":"n", "l":"o", "k":"p",
+        "j":"q", "i":"r", "h":"s", "g":"t", "f":"u", "e":"v", "d":"w", "c":"x",
+        "b":"y", "a":"z",
     }
     decrypt_ans = input("Please type in the words about what you would like to decrypt!")
     decrypt_text = ""
     for letter in decrypt_ans:
-        decrypt_text += decrypt_dict.get(letter, letter)
+        decrypt_text += decrypt_dict.get(letter)
     decrypt_list.append(decrypt_text)
     print(f"{decrypt_text}")
 
@@ -88,12 +92,14 @@ while True:
 
 # Give them a menu to choose from, either encrypt/decrypt a message(restart), give a random fun fact about Atbash, or exit 
     while True:
-        print("\nHeyy, here are your following options! (1) Encrypt or Decrypt another message, (2) View your history, (3) Fun fact about Atbash and (4) Exit!")
+        print("\nHeyy, here are your following options! (1) Encrypt another message, (2) Decrypt another message, (3) View your history, (4) Fun fact about Atbash and (5) Exit!")
         final = input("Please select from one of the four options above!").strip()
 
         if final == "1":
-           (print)
+           encrypt_func(encrypt_list)
         elif final == "2":
-            previous_his(encrypt_list, decrypt_list)
+            decrypt_func(decrypt_list)
         elif final == "3":
+            previous_his(encrypt_list, decrypt_list)
+        elif final == "4":
             fun_fact()
