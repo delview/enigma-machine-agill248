@@ -103,3 +103,8 @@ while True:
             previous_his(encrypt_list, decrypt_list)
         elif final == "4":
             fun_fact()
+        elif final == "5":
+            print("Thanks for playing and have a fun time!")
+            break
+        else:
+            print("Please choose an option, by typing in a number.")
