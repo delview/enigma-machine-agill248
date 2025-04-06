@@ -13,12 +13,15 @@ def encrypt_func(encrypt_list: list):
         "i":"r", "j":"q", "k":"p", "l":"o", "m":"n", "n":"m", "o":"l", "p":"k",
         "q":"j", "r":"i", "s":"h", "t":"g", "u":"f", "v":"e", "w":"d", "x":"c", 
         "y":"b", "z":"a",
-        
+        "0":"0", "1":"9", "2":"8", "3":"7", "4":"6", "5":"5", "6":"4", "7":"3",
+        "8":"2", "9":"1",
+        "!":"+", "@":"_", "#":")", "$":"(", "%":"*", "^":"&", "&":"^", "*":"%",
+        "(":"$", ")":"#", "_":"@", "+":"!", "[":"]", "]":"[", "<":"?", "?":"<",
     }
     encrypt_ans = input("Please type in the words you would like to encrypt.")
     encrypt_message = ""
     for letter in encrypt_ans:
-        encrypt_message += encrypt_dict.get(letter) # .get means to return 
+        encrypt_message += encrypt_dict.get(letter, letter) # .get means to return, 1st letter finds and 2nd one returns is isnt found 
     encrypt_list.append(encrypt_message)
     print(f"{encrypt_message}")
 
@@ -33,11 +36,15 @@ def decrypt_func(decrypt_list: list):
         "r":"i", "q":"j", "p":"k", "o":"l", "n":"m", "m":"n", "l":"o", "k":"p",
         "j":"q", "i":"r", "h":"s", "g":"t", "f":"u", "e":"v", "d":"w", "c":"x",
         "b":"y", "a":"z",
+        "0":"0", "9":"1", "8":"2", "7":"3", "6":"4", "5":"5", "4":"6", "3":"7",
+        "2":"8", "1":"9",
+        "<":"?" ,"?":"<" ,"[":"]" ,"]":"[" ,"!":"+" ,"@":"_" ,"#":")" ,"$":"(",
+        "%":"*" ,"^":"&" ,"&":"^" ,"*":"%" ,"(":"$" ,")":"#" ,"_":"@" ,"+":"!" 
     }
     decrypt_ans = input("Please type in the words about what you would like to decrypt!")
     decrypt_text = ""
     for letter in decrypt_ans:
-        decrypt_text += decrypt_dict.get(letter)
+        decrypt_text += decrypt_dict.get(letter, letter)
     decrypt_list.append(decrypt_text)
     print(f"{decrypt_text}")
 
@@ -108,3 +115,4 @@ while True:
             break
         else:
             print("Please choose an option, by typing in a number.")
+    break
