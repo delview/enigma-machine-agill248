@@ -1,6 +1,6 @@
 import random # For random fun fact
 
-# This is a Enigma Machine
+# This is a Enigma Machine 
 
 #Create a Encrypt Function
 def encrypt_func(encrypt_list: list):
